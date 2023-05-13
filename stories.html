@@ -17,8 +17,15 @@
 <body>
 	<section class="sub-header">
 		<nav>
-			<a href="index.html"><img src="logo.png"></a>
-			<div class="nav-links" id="navlinks">
+			<div style="clear: both;">
+				<a href="index.html"><img src="logo.png"></a>
+				<div class="hamburger-menu" id="hamburger-menu">
+					<div class="hamburger-menu__line"></div>
+					<div class="hamburger-menu__line"></div>
+					<div class="hamburger-menu__line"></div>
+				</div>
+			</div>
+			<div class="nav-links" id="nav-links">
 				<ul>
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="stories.html">ALUMNI STORIES</a></li>
@@ -26,11 +33,6 @@
 					<li><a href="about.html">ABOUT</a></li>
 					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
-			</div>
-			<div class="hamburger" id="hamburger">
-				<div></div>
-				<div></div>
-				<div></div>
 			</div>
 		</nav>
 		<h1>Our Alumni Stories</h1>
@@ -94,7 +96,7 @@
 			<img src="a4.jpg">
 
 			<h4>Becoming Unparalleled</h4>
-			
+
 			<p><br>
 				Presenting the success story of our high-flying Alumni, Mr. Jatin Chauhan.
 				Jatin has proven that hard work and hustle always turns the tides in your favour, from starting as a
@@ -216,9 +218,14 @@
 
 
 		<script>
-			const hamburger = document.getElementById('hamburger');
-			const navLinks = document.getElementById('navlinks');
-			hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+			const hamburgerMenu = document.querySelector('#hamburger-menu');
+			const navLinks = document.querySelector('#nav-links');
+	
+			hamburgerMenu.addEventListener('click', () => {
+				hamburgerMenu.classList.toggle('toggle');
+				navLinks.classList.toggle('active');
+			});
+	
 		</script>
 
 

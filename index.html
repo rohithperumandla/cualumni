@@ -17,8 +17,15 @@
 <body>
 	<section class="header">
 		<nav>
-			<a href="index.html"><img src="logo.png"></a>
-			<div class="nav-links" id="navlinks">
+			<div style="clear: both;">
+				<a href="index.html"><img src="logo.png"></a>
+				<div class="hamburger-menu" id="hamburger-menu">
+					<div class="hamburger-menu__line"></div>
+					<div class="hamburger-menu__line"></div>
+					<div class="hamburger-menu__line"></div>
+				</div>
+			</div>
+			<div class="nav-links" id="nav-links">
 				<ul>
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="stories.html">ALUMNI STORIES</a></li>
@@ -27,12 +34,8 @@
 					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
 			</div>
-			<div class="hamburger" id="hamburger">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
 		</nav>
+
 		<div class="text-box">
 			<h1>Chandigarh University</h1>
 			<p> <i> NAAC A+ Grade Accredited University<br>QS World University Rankings - Overall Global Rank
@@ -186,7 +189,7 @@
 
 	<section class="cta">
 		<p> <b>Join today to connect with the CU Alumni Network, Any Queries? <br> <br>
-			<a href="contact.html" class="hero-btn">CONTACT US</a></b> 
+				<a href="contact.html" class="hero-btn">CONTACT US</a></b>
 		</p>
 	</section>
 
@@ -245,9 +248,14 @@
 
 
 	<script>
-		const hamburger = document.getElementById('hamburger');
-		const navLinks = document.getElementById('navlinks');
-		hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+		const hamburgerMenu = document.querySelector('#hamburger-menu');
+		const navLinks = document.querySelector('#nav-links');
+
+		hamburgerMenu.addEventListener('click', () => {
+			hamburgerMenu.classList.toggle('toggle');
+			navLinks.classList.toggle('active');
+		});
+
 	</script>
 
 
